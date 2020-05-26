@@ -2,7 +2,7 @@ package com.karishma.shoppingcart;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+//import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 //Indicates to spring that this is a configuration class 
@@ -11,10 +11,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer{
 
     //better way to return a view rather than the @GetMapping annotation in a controller
-    @Override
+   /* @Override
     public void addViewControllers(ViewControllerRegistry registry) {
        registry.addViewController("/").setViewName("home");
-    }
+    }*/
+
+    
 
    @Override
    public void addResourceHandlers(ResourceHandlerRegistry registry) {
