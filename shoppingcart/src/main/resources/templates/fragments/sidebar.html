@@ -1,0 +1,19 @@
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/category/all" class="nav-link">All Products</a>
+    <li class="list-group-item" th:each="category: ${ccategories}">
+        <a class="nav-link" th:href="@{'/category/' + ${category.slug}}" th:text="${category.name}">All Products</a>
+    </li>
+    <div th:replace="/fragments/cart_partial"></div>
+</div>
+<span style="font-size:25px;cursor:pointer" onclick="openNav()">&#9776; Categories</span>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>

@@ -23,7 +23,7 @@ public class PagesController {
         Page page = pageRepo.findBySlug("home");
         model.addAttribute("page", page);
         
-        return "page";
+        return "homepage";
     }
 
     @GetMapping("/login")
