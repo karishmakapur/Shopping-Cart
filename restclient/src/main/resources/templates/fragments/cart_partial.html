@@ -1,0 +1,23 @@
+<div class="bg-dark text-white p-3 mt-3" th:fragment="cart_partial" th:if="${notCartViewPage == null}">
+    <div class="cart cartActive" th:if="${cartActive}">
+        <p>You have <span th:text="${csize}"></span> items in your cart.</p>
+        <p>Total <span th:text="'$' + ${#numbers.formatDecimal(ctotal, 0, 'COMMA', 2, 'POINT')}"></span> items in your cart.</p>
+        <p>
+            <button class="btn btn-info btn-sm" onclick=" goToCart()">View Cart</button>
+            <button class="btn btn-info btn-sm" onclick=" clearCart()">Clear Cart</button>
+        </p>
+    </div>
+    <div class="cart cartInactive" th:unless="${cartActive}">
+        <p>Your cart is empty.</p>
+    </div>
+
+
+<script>
+    function goToCart() {
+        location.href = "/cart/view";
+    } 
+    function clearCart() {
+        location.href = "/cart/clear";
+    } 
+</script>
+</div>

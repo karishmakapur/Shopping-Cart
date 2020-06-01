@@ -1,0 +1,8 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost/shoppingcart
+        username: root
+        password: password
+
+server:
+    port: 8090
